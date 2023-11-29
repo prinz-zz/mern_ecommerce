@@ -298,11 +298,7 @@ export default function Navigation () {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
+                  <h1 className="text-3xl"><sub>PG</sub>Store</h1>
                 </a>
               </div>
 

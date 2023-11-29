@@ -8,7 +8,7 @@ const slides = [
   {
     id: 1,
     image:
-      "https://images.pexels.com/photos/5273676/pexels-photo-5273676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/994234/pexels-photo-994234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 2,
@@ -23,12 +23,12 @@ const slides = [
   {
     id: 4,
     image:
-      "https://images.pexels.com/photos/6311687/pexels-photo-6311687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/242829/pexels-photo-242829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     id: 5,
     image:
-      "https://images.pexels.com/photos/5325847/pexels-photo-5325847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function MainCarousel() {
   return (
     <>
       {/* Swiper */}
-      <Swiper navigation modules={[Autoplay]} autoplay={{ delay: 3000 }}>
+      <Swiper navigation loop modules={[Autoplay]} autoplay={{ delay: 3000 }}>
         {slides.map((item) => (
           <SwiperSlide key={item.id}>
             <div
