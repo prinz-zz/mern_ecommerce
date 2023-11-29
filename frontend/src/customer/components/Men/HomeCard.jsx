@@ -33,7 +33,7 @@ export default function HomeCard() {
       <h2 className="text-3xl font-semibold text-stone-700 my-4">Men's Jeans</h2>
       <Swiper
         navigation
-        autoHeight
+        // loop
         slidesPerView={1}
         spaceBetween={30}
         breakpoints={{
@@ -55,7 +55,7 @@ export default function HomeCard() {
         // }}
         // modules={[Pagination]}
       >
-        {mensData.map((jeans) => (
+        {mensData.slice(0,15).map((jeans) => (
           <SwiperSlide key={jeans.id}>
             <HomeCardItem jeans={jeans} />
           </SwiperSlide>
