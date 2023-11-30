@@ -6,7 +6,7 @@
         "color": "Purple",
         "selling_price": "₹789",
         "price": "₹3,999",
-        "disscount": "80% off",
+        "disccount": "80% off",
         "id":1
     },
     {
@@ -16,7 +16,7 @@
         "color": "Pink",
         "selling_price": "₹996",
         "price": "₹3,500",
-        "disscount": "71% off",
+        "disccount": "71% off",
         "id":2
     },
     {
@@ -26,7 +26,7 @@
         "color": "Red",
         "selling_price": "₹374",
         "price": "₹1,798",
-        "disscount": "79% off",
+        "disccount": "79% off",
         "id":3
     },
     {
@@ -36,7 +36,7 @@
         "color": "Black",
         "selling_price": "₹329",
         "price": "₹2,299",
-        "disscount": "85% off",
+        "disccount": "85% off",
         "id":4
     },
     {
@@ -46,7 +46,7 @@
         "color": "Yellow",
         "selling_price": "₹390",
         "price": "₹942",
-        "disscount": "58% off",
+        "disccount": "58% off",
         "id":5
     },
     {
@@ -56,7 +56,7 @@
         "color": "Maroon",
         "selling_price": "₹497",
         "price": "₹2,899",
-        "disscount": "82% off",
+        "disccount": "82% off",
         "id":6
     },
     {
@@ -66,7 +66,7 @@
         "color": "Pink, Beige",
         "selling_price": "₹479",
         "price": "₹3,999",
-        "disscount": "88% off",
+        "disccount": "88% off",
         "id":7
     },
     {
@@ -76,7 +76,7 @@
         "color": "Pack of 2, Multicolor",
         "selling_price": "₹634",
         "price": "₹2,199",
-        "disscount": "71% off",
+        "disccount": "71% off",
         "id":8
     },
     {
@@ -86,7 +86,7 @@
         "color": "Blue",
         "selling_price": "₹295",
         "price": "₹2,007",
-        "disscount": "85% off",
+        "disccount": "85% off",
         "id":9
     },
     {
@@ -96,7 +96,7 @@
         "color": "Grey",
         "selling_price": "₹296",
         "price": "₹1,999",
-        "disscount": "85% off",
+        "disccount": "85% off",
         "id":10
     },
     {
@@ -106,7 +106,7 @@
         "color": "Magenta",
         "selling_price": "₹479",
         "price": "₹2,599",
-        "disscount": "81% off",
+        "disccount": "81% off",
         "id":11
     },
     {
@@ -116,7 +116,7 @@
         "color": "Multicolor",
         "selling_price": "₹1,329",
         "price": "₹4,997",
-        "disscount": "73% off",
+        "disccount": "73% off",
         "id":12
     },
     {
@@ -126,7 +126,7 @@
         "color": "Black",
         "selling_price": "₹289",
         "price": "₹2,999",
-        "disscount": "90% off",
+        "disccount": "90% off",
         "id":13
     },
     {
@@ -136,7 +136,7 @@
         "color": "Black",
         "selling_price": "₹649",
         "price": "₹2,499",
-        "disscount": "74% off",
+        "disccount": "74% off",
         "id":14
     },
     {
@@ -146,7 +146,7 @@
         "color": "Pink",
         "selling_price": "₹373",
         "price": "₹1,699",
-        "disscount": "78% off",
+        "disccount": "78% off",
         "id":15
     },
     {
@@ -156,7 +156,7 @@
         "color": "Black",
         "selling_price": "₹273",
         "price": "₹1,233",
-        "disscount": "77% off",
+        "disccount": "77% off",
         "id":16
     },
     {
@@ -166,7 +166,7 @@
         "color": "Black",
         "selling_price": "₹699",
         "price": "₹2,999",
-        "disscount": "76% off",
+        "disccount": "76% off",
         "id":18
     },
     {
@@ -176,7 +176,7 @@
         "color": "Black",
         "selling_price": "₹1,299",
         "price": "₹1,999",
-        "disscount": "35% off",
+        "disccount": "35% off",
         "id":19
     },
     {
@@ -186,7 +186,7 @@
         "color": "Red",
         "selling_price": "₹499",
         "price": "₹2,999",
-        "disscount": "83% off",
+        "disccount": "83% off",
         "id":20
     },
     {
@@ -196,7 +196,7 @@
         "color": "Yellow",
         "selling_price": "₹478",
         "price": "₹999",
-        "disscount": "52% off",
+        "disccount": "52% off",
         "id":21
     },
     {
@@ -206,7 +206,7 @@
         "color": "Pink, Beige",
         "selling_price": "₹349",
         "price": "₹1,663",
-        "disscount": "79% off",
+        "disccount": "79% off",
         "id":22
     },
     {
@@ -216,7 +216,7 @@
         "color": "White",
         "selling_price": "₹449",
         "price": "₹1,999",
-        "disscount": "77% off",
+        "disccount": "77% off",
         "id":23
     },
     {
@@ -226,7 +226,7 @@
         "color": "Maroon",
         "selling_price": "₹492",
         "price": "₹999",
-        "disscount": "50% off",
+        "disccount": "50% off",
         "id":24
     },
     {
@@ -236,7 +236,7 @@
         "color": "Yellow",
         "selling_price": "₹449",
         "price": "₹1,999",
-        "disscount": "77% off",
+        "disccount": "77% off",
         "id":25
     },
     {
@@ -246,7 +246,7 @@
         "color": "Pink, Grey",
         "selling_price": "₹469",
         "price": "₹3,999",
-        "disscount": "88% off",
+        "disccount": "88% off",
         "id":26
     },
     {
@@ -256,7 +256,7 @@
         "color": "Dark Blue",
         "selling_price": "₹349",
         "price": "₹1,999",
-        "disscount": "82% off",
+        "disccount": "82% off",
         "id":27
     },
     {
@@ -266,7 +266,7 @@
         "color": "Cream",
         "selling_price": "₹489",
         "price": "₹2,499",
-        "disscount": "80% off",
+        "disccount": "80% off",
         "id":28
     },
     {
@@ -276,7 +276,7 @@
         "color": "Blue",
         "selling_price": "₹479",
         "price": "₹2,599",
-        "disscount": "81% off",
+        "disccount": "81% off",
         "id":29
     },
     {
@@ -286,7 +286,7 @@
         "color": "Red",
         "selling_price": "₹294",
         "price": "₹1,599",
-        "disscount": "81% off",
+        "disccount": "81% off",
         "id":30
     },
     {
@@ -296,7 +296,7 @@
         "color": "Green, Pink",
         "selling_price": "₹289",
         "price": "₹1,563",
-        "disscount": "81% off",
+        "disccount": "81% off",
         "id":31
     },
     {
@@ -306,7 +306,7 @@
         "color": "Light Green",
         "selling_price": "₹471",
         "price": "₹2,499",
-        "disscount": "81% off",
+        "disccount": "81% off",
         "id":32
     },
     {
@@ -316,7 +316,7 @@
         "color": "Maroon",
         "selling_price": "₹379",
         "price": "₹3,999",
-        "disscount": "90% off",
+        "disccount": "90% off",
         "id":33
     },
     {
@@ -326,7 +326,7 @@
         "color": "Light Blue, Blue",
         "selling_price": "₹387",
         "price": "₹3,999",
-        "disscount": "90% off",
+        "disccount": "90% off",
         "id":34
     },
     {
@@ -336,7 +336,7 @@
         "color": "Maroon, Black",
         "selling_price": "₹249",
         "price": "₹2,497",
-        "disscount": "90% off",
+        "disccount": "90% off",
         "id":35
     },
     {
@@ -346,7 +346,7 @@
         "color": "Yellow",
         "selling_price": "₹296",
         "price": "₹1,999",
-        "disscount": "85% off",
+        "disccount": "85% off",
         "id":36
     },
     {
@@ -356,7 +356,7 @@
         "color": "Red",
         "selling_price": "₹441",
         "price": "₹5,999",
-        "disscount": "92% off",
+        "disccount": "92% off",
         "id":37
     },
     {
@@ -366,7 +366,7 @@
         "color": "Red, Beige",
         "selling_price": "₹349",
         "price": "₹1,663",
-        "disscount": "79% off",
+        "disccount": "79% off",
         "id":38
     },
     {
@@ -376,7 +376,7 @@
         "color": "Pink",
         "selling_price": "₹499",
         "price": "₹2,999",
-        "disscount": "83% off",
+        "disccount": "83% off",
         "id":39
     },
     {
@@ -386,7 +386,7 @@
         "color": "White, Black",
         "selling_price": "₹299",
         "price": "₹1,299",
-        "disscount": "76% off",
+        "disccount": "76% off",
         "id":40
     },
     {
@@ -396,7 +396,7 @@
         "color": "Red",
         "selling_price": "₹299",
         "price": "₹1,299",
-        "disscount": "76% off",
+        "disccount": "76% off",
         "id":41
     }
 ]
