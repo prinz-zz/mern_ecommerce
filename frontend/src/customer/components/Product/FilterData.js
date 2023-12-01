@@ -1,19 +1,32 @@
-
 export const filters = [
   {
     id: "color",
     name: "Color",
     options: [
-      { value: "white", label: "white" },
-      { value: "black", label: "black" },
-      { value: "green", label: "green" },
-      { value: "yellow", label: "yellow" },
-      { value: "blue", label: "blue" },
-      { value: "maroon", label: "maroon" },
-      { value: "cream", label: "cream" },
-      { value: "pink", label: "pink" },
+      { value: "white", label: "White" },
+      { value: "black", label: "Black" },
+      { value: "green", label: "Green" },
+      { value: "yellow", label: "Yellow" },
+      { value: "blue", label: "Blue" },
+      { value: "maroon", label: "Maroon" },
+      { value: "orange", label: "Orange" },
+      { value: "pink", label: "Pink" },
+      { value: "gold", label: "Gold" },
+      { value: "mutlicolor", label: "Multicolor" },
+      { value: "grey", label: "Grey" },
+      { value: "beige", label: "Beige" },
+      { value: "purple", label: "Purple" },
     ],
-  }
+  },
+  {
+    id: "size",
+    name: "Size",
+    options: [
+      { value: "s", label: "S" },
+      { value: "m", label: "M" },
+      { value: "l", label: "L" },
+    ],
+  },
 ];
 
 export const singleFilters = [

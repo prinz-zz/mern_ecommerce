@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 import {
   ChevronDownIcon,
   FunnelIcon,
@@ -11,8 +12,6 @@ import {
 import ProductCard from "./ProductCard";
 import axios from "axios";
 import { filters, singleFilters } from "./FilterData.js";
-
-console.log(singleFilters);
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: true },
@@ -26,15 +25,45 @@ function classNames(...classes) {
 export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await axios.get("data/mens/men_jeans.json");
+      const res = await axios.get("data/mens/mens_kurtha.json");
       const data = await res.data;
       setProducts(data);
     };
     fetchItems();
   }, []);
+
+  const handleFilter = async (value, sectionId) => {
+    const searchParams = new URLSearchParams(location.search);
+    let filterValue = searchParams.getAll(sectionId);
+
+    if (filterValue.length > 0 && filterValue[0].split(",").includes(value)) {
+      filterValue = filterValue[0].split(",").filter((item) => item !== value);
+
+      if (filterValue.length === 0) {
+        searchParams.delete(sectionId);
+      }
+    } else {
+      filterValue.push(value);
+    }
+
+    if (filterValue.length > 0) {
+      searchParams.set(sectionId, filterValue.join(","));
+    }
+
+    const Query = searchParams.toString();
+    navigate({ search: `?${Query}` });
+  };
+
+  const handleRadioFilterChange = (e, sectionId) => {
+    const searchParams = new URLSearchParams(location.search);
+    searchParams.set(sectionId, e.target.value);
+    const Query = searchParams.toString();
+    navigate({ search: `?${Query}` });
+  };
 
   return (
     <div className="bg-white">
@@ -170,6 +199,7 @@ export default function Product() {
                                     key={option.value}
                                     className="flex items-center">
                                     <input
+                                    onChange={(e)=>handleRadioFilterChange(e,section.id)}
                                       id={`filter-mobile-${section.id}-${optionIdx}`}
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
@@ -276,7 +306,7 @@ export default function Product() {
                   <h1 className="text-lg opacity-50 font-bold">Filters </h1>
                   <FunnelIcon className="h-4 w-4 opacity-50" />
                 </div>
-                
+
                 <form className="hidden lg:block">
                   {filters.map((section) => (
                     <Disclosure
@@ -312,6 +342,9 @@ export default function Product() {
                                   key={option.value}
                                   className="flex items-center">
                                   <input
+                                    onChange={() =>
+                                      handleFilter(option.value, section.id)
+                                    }
                                     id={`filter-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
                                     defaultValue={option.value}
@@ -366,6 +399,7 @@ export default function Product() {
                                   key={option.value}
                                   className="flex items-center">
                                   <input
+                                    onChange={(e)=>handleRadioFilterChange(e, section.id)}
                                     id={`filter-mobile-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
                                     defaultValue={option.value}
