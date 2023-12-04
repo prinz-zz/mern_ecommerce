@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import Grid from "@mui/material/Grid";
 import ProductReview from "./ProductReview";
+import { Avatar, Box, Rating, LinearProgress } from "@mui/material";
+import axios from "axios";
+import Card from '../Card';
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -60,6 +63,17 @@ function classNames(...classes) {
 export default function ProductDetails() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async() => {
+      const res = await axios.get('data/mens/mens_kurtha.json');
+      const data = await res.data;
+      console.log(data);
+      setData(data)
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-white lg:px-20">
@@ -127,7 +141,7 @@ export default function ProductDetails() {
           </div>
 
           {/* Product info */}
-          <div className="lg:col-span-1 max-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
+          <div className="lg:col-span-1 max-auto max-w-2xl px-4 pb-10 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-16">
             <div className="lg:col-span-2 mb-2">
               <h1 className="text-2xl lg:text-2xl font-semibold text-slate-700 mb-2">
                 Product name
@@ -232,7 +246,7 @@ export default function ProductDetails() {
                     <RadioGroup.Label className="sr-only">
                       Choose a size
                     </RadioGroup.Label>
-                    <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                    <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-7">
                       {product.sizes.map((size) => (
                         <RadioGroup.Option
                           key={size.name}
@@ -244,7 +258,7 @@ export default function ProductDetails() {
                                 ? "cursor-pointer bg-white text-gray-900 shadow-sm"
                                 : "cursor-not-allowed bg-gray-50 text-gray-200",
                               active ? "ring-2 ring-indigo-500" : "",
-                              "group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6"
+                              "group relative flex items-center justify-center rounded-md border  text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-4"
                             )
                           }>
                           {({ active, checked }) => (
@@ -298,7 +312,7 @@ export default function ProductDetails() {
               </form>
             </div>
 
-            <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+            <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-gray-200 lg:pb-10 lg:pr-8 lg:pt-6">
               {/* Description and details */}
               <div>
                 <h3 className="sr-only">Description</h3>
@@ -346,16 +360,123 @@ export default function ProductDetails() {
             <Grid container spacing={7}>
               <Grid item xs={7}>
                 {[1, 1, 1].map((item, i) => (
-                  <ProductReview key={i}/>
+                  <ProductReview key={i} />
                 ))}
               </Grid>
               <Grid item xs={5}>
-                  <h1 className="text-xl font-semibold pb-1">Product Rating</h1>
+                <h1 className="text-xl font-semibold pb-1">Product Rating</h1>
+                <div className="flex items-center space-x-3">
+                  <Rating
+                    defaultValue={2.5}
+                    precision={0.5}
+                    name="half-rating"
+                    readOnly
+                  />
+                  <p className="text-">5345 Ratings</p>
+                </div>
+
+                <Box className="mt-4">
+                  <Grid container className="justify-center items-center my-2">
+                    <Grid item xs={3}>
+                      <p>Excellent</p>
+                    </Grid>
+                    <Grid item xs={9}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={50}
+                        color="success"
+                        sx={{
+                          bgcolor: "#d0d0d0",
+                          borderRadius: 4,
+                          height: "7px",
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                  <Grid container className="justify-center items-center my-2">
+                    <Grid item xs={3}>
+                      <p>Very Good</p>
+                    </Grid>
+                    <Grid item xs={9}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={50}
+                        color="success"
+                        sx={{
+                          bgcolor: "#d0d0d0",
+                          borderRadius: 4,
+                          height: "7px",
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                  <Grid container className="justify-center items-center my-2">
+                    <Grid item xs={3}>
+                      <p>Good</p>
+                    </Grid>
+                    <Grid item xs={9}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={50}
+                        color="success"
+                        sx={{
+                          bgcolor: "#d0d0d0",
+                          borderRadius: 4,
+                          height: "7px",
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+
+                  <Grid container className="justify-center items-center my-2">
+                    <Grid item xs={3}>
+                      <p>Average</p>
+                    </Grid>
+                    <Grid item xs={9}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={20}
+                        color="secondary"
+                        sx={{
+                          bgcolor: "#d0d0d0",
+                          borderRadius: 4,
+                          height: "7px",
+                          color: "deepOrange[500]",
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                  <Grid container className="justify-center items-center my-2">
+                    <Grid item xs={3}>
+                      <p>Poor</p>
+                    </Grid>
+                    <Grid item xs={9}>
+                      <LinearProgress
+                        variant="determinate"
+                        value={50}
+                        color="error"
+                        sx={{
+                          bgcolor: "#d0d0d0",
+                          borderRadius: 4,
+                          height: "7px",
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Box>
               </Grid>
             </Grid>
           </div>
         </section>
-        
+
+        <section className="mt-10">
+          <h1 className="font-semibold text-lg pb-4">Similar Products</h1>
+          <div className="flex flex-wrap">
+            {data.map((item)=>(
+              <Card item={item}/>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
