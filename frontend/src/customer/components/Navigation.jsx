@@ -414,13 +414,13 @@ export default function Navigation () {
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 hover:text-gray-800">
+                  <a href="#" className="flex items-center justify-center text-gray-700 hover:text-gray-800">
                     {/* <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     /> */}
-                    <span className="ml-3 block text-sm font-medium"><sub>PG</sub>Store</span>
+                    <span className="p-1 inline-block h-8 w-8 rounded-full bg-violet-700 text-white">PG</span>
                     {/* <span className="sr-only">, change currency</span> */}
                   </a>
                 </div>
