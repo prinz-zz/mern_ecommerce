@@ -3,7 +3,7 @@ import HomeCard from "../customer/components/Men/HomeCard";
 import WomenTop from "../customer/components/Women/WomenTop";
 import ShoesCard from "../customer/components/Shoes/ShoesCard";
 import MenShirtCard from "../customer/components/Men/MenShirtCard";
-import Footer from "../customer/components/Footer";
+
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         <hr className="h-px my-8 bg-gray-300 border-0 dark:bg-gray-300" />
         <HomeCard />
       </div>
-      <Footer/>
+     
     </main>
   );
 }

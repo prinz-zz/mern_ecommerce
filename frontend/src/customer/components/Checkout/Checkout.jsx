@@ -5,16 +5,23 @@ import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import DeliveryAddress from './DeliveryAddress';
+import OrderSummary from './OrderSummary';
+
 
 const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
+  "Login",
+  "Add Delivery Address",
+  "Order Summary",
+  "Payment"
 ];
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
+
+  const querySearch = new URLSearchParams(location.search)
+  const step = querySearch.get('step');
 
   const totalSteps = () => {
     return steps.length;
@@ -58,6 +65,7 @@ export default function Checkout() {
   };
 
   return (
+    <div className="px-10 lg:px-20 mt-10 ">
     <Box sx={{ width: "100%" }}>
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
@@ -80,9 +88,7 @@ export default function Checkout() {
           </>
         ) : (
           <>
-            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1}
-            </Typography>
+            
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
@@ -92,7 +98,7 @@ export default function Checkout() {
                 Back
               </Button>
               <Box sx={{ flex: "1 1 auto" }} />
-              <Button onClick={handleNext} sx={{ mr: 1 }}>
+              {/* <Button onClick={handleNext} sx={{ mr: 1 }}>
                 Next
               </Button>
               {activeStep !== steps.length &&
@@ -108,11 +114,17 @@ export default function Checkout() {
                       ? "Finish"
                       : "Complete Step"}
                   </Button>
-                ))}
+                ))} */}
             </Box>
+
+
+            <div className="mt-10">
+                { step == 2 ? <DeliveryAddress/> : <OrderSummary/>}
+              </div>
           </>
         )}
       </div>
     </Box>
+    </div>
   );
 }
