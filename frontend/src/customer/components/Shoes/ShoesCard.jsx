@@ -18,7 +18,7 @@ export default function ShoesCard() {
   SwiperCore.use([Navigation]);
 
   const [shoesData, setShoesData] = useState([]);
-  console.log(shoesData);
+
 
   useEffect(() => {
     const fetchShoesData = async () => {

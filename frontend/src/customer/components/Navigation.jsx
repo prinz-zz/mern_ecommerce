@@ -6,7 +6,7 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from "react-router-dom";
 
 const navigation = {
   categories: [
@@ -112,6 +112,12 @@ function classNames(...classes) {
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  // const handleCategoryClick = (category, section, item, close) => {
+  //   navigate(`/${category.id}/${section.id}/${item.name}`);
+  //   close();
+  // };
 
   return (
     <div className="bg-white">
@@ -166,7 +172,6 @@ export default function Navigation() {
                             )
                           }>
                           {category.name}
-                          
                         </Tab>
                       ))}
                     </Tab.List>
@@ -196,7 +201,6 @@ export default function Navigation() {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                                
                               </a>
                               <p aria-hidden="true" className="mt-1">
                                 Shop now
@@ -210,7 +214,6 @@ export default function Navigation() {
                               id={`${category.id}-${section.id}-heading-mobile`}
                               className="font-medium text-gray-900">
                               {section.name}
-                              
                             </p>
                             <ul
                               role="list"
@@ -305,7 +308,9 @@ export default function Navigation() {
                 <a href="#">
                   <span className="sr-only">Your Company</span>
                   <h1 className="text-3xl">
-                    <sub>PG</sub>Store
+                    <Link to="/">
+                      <sub>PG</sub>Store
+                    </Link>
                   </h1>
                 </a>
               </div>
@@ -326,7 +331,6 @@ export default function Navigation() {
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out"
                               )}>
                               {category.name}
-                              
                             </Popover.Button>
                           </div>
 
@@ -348,64 +352,26 @@ export default function Navigation() {
                               <div className="relative bg-white">
                                 <div className="mx-auto max-w-7xl px-8">
                                   <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                                    <div className="col-start-2 grid grid-cols-2 gap-x-8">
-                                      {category.featured.map((item) => (
-                                        <div
-                                          key={item.name}
-                                          className="group relative text-base sm:text-sm">
-                                          <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                            <img
-                                              src={item.imageSrc}
-                                              alt={item.imageAlt}
-                                              className="object-cover object-center"
-                                            />
-                                          </div>
-                                          <a
-                                            href={item.href}
-                                            className="mt-6 block font-medium text-gray-900">
-                                            <span
-                                              className="absolute inset-0 z-10"
-                                              aria-hidden="true"
-                                            />
-                                            {item.name}
-                                            
-                                          </a>
-                                          <p
-                                            aria-hidden="true"
-                                            className="mt-1">
-                                            Shop now
-                                          </p>
-                                        </div>
-                                      ))}
-                                    </div>
                                     <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
-                                      {category.sections.map((section) => (
-                                        <div key={section.name}>
-                                          <p
-                                            id={`${section.name}-heading`}
-                                            className="font-medium text-gray-900">
-                                            {section.name}
-                                            sections
-                                          </p>
-                                          <ul
-                                            role="list"
-                                            aria-labelledby={`${section.name}-heading`}
-                                            className="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
-                                            {section.items.map((item) => (
-                                              <li
-                                                key={item.name}
-                                                className="flex">
-                                                <a
-                                                  href={item.href}
-                                                  className="hover:text-gray-800">
-                                                  {item.name}
-                                                  huyyhhhhhhhhhhhhhhhhhhhhhhh
-                                                </a>
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      ))}
+                                      <div>
+                                        <p className="font-medium text-gray-900">
+                                          Women
+                                        </p>
+                                        <ul
+                                          role="list"
+                                          aria-labelledby="Womens"
+                                          className="mt-6 space-y-6 sm:mt-4 sm:space-y-4">
+                                          <li className="hover:text-gray-800">
+                                            <Link to="/top">Top</Link>
+                                          </li>
+                                          <li className="hover:text-gray-800">
+                                            <Link to="/Dress">Dress</Link>
+                                          </li>
+                                          <li className="hover:text-gray-800">
+                                            <Link to="/Saree">Saree</Link>
+                                          </li>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>

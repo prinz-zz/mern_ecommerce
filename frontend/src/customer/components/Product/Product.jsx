@@ -27,6 +27,7 @@ export default function Product() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const fetchItems = async () => {
       const res = await axios.get("data/mens/mens_kurtha.json");

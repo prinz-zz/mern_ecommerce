@@ -18,7 +18,7 @@ export default function LehangaCard() {
   SwiperCore.use([Navigation]);
 
   const [lehangaData, setLehangaWomensData] = useState([]);
-  console.log(lehangaData);
+
 
   useEffect(() => {
     const fetchWomensData = async () => {

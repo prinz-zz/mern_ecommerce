@@ -1,5 +1,6 @@
 import "./App.css";
 import Navigation from "./customer/components/Navigation";
+import Navbar from "./customer/components/Navbar";
 import Product from "./customer/components/Product/Product";
 import ProductDetails from "./customer/components/ProductDetails/ProductDetails";
 import Cart from "./customer/components/Cart/Cart";
@@ -13,12 +14,13 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
+      <Navbar />
       <Routes>
         <Route path='/' index element={<Home />}/>
         <Route path='/cart' element={ <Cart />}/>
-        <Route path='/:l1/:l2/:l3' element={<Product />}/>
-        <Route path='/productDetails' element={ <ProductDetails />}/>
+        <Route path='/:name' element={<Product />}/>
+        <Route path='/product/:id' element={ <ProductDetails />}/>
         <Route path='/checkout' element={<Checkout />}/>
         <Route path='/order' element={<Order />}/>
         <Route path='/orderDetails' element={<OrderDetails />}/>

@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function ProductCard({ product }) {
   return (
     <div className="bg-white shadow-md hover:shadow-lg trasition-shadow overflow-hidden rounded-lg w-full sm:w-[250px] m-4 hover:scale-105 transition-scale duration-300 z-20">
